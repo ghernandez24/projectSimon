@@ -1,8 +1,7 @@
-// console.log('hello')
-// const gridButton = document.querySelectorAll('.js-button')
+let currentScore = 0;
+let scoreBoard = document.querySelector('.js-score')
 
 const computerChoices = [];
-
 const gameGrid = document.querySelector('.game-grid')
 
 gameGrid.addEventListener('click', (event) =>{
@@ -12,3 +11,13 @@ gameGrid.addEventListener('click', (event) =>{
         console.log(computerChoices)
     }
 })
+
+gameGrid.addEventListener('click', (e) => {
+	if (e.target.classList.contains('js-button')) {
+		currentScore += 1;
+		if (currentScore < 9999) {
+			scoreBoard.innerText = currentScore;
+			console.log(currentScore);
+		}
+	}
+});  
