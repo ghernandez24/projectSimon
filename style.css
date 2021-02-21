@@ -12,3 +12,23 @@ a {
   border-color: black;
   padding: 1rem 2rem;
 }
+
+main {
+  padding: 10px 0  10px 0;
+}
+
+#red-panel { 
+ background-color: red;
+}
+
+#green-panel {
+  background-color: green;
+}
+
+#blue-panel {
+  background-color: blue;
+}
+
+#yellow-panel {
+  background-color: yellow;
+}
