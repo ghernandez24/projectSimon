@@ -1,6 +1,6 @@
 let currentScore = 0;
 let scoreBoard = document.querySelector('.js-score');
-let start;
+let start= false;
 
 
 const computerChoices = [];
