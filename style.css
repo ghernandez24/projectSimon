@@ -17,8 +17,15 @@ a {
 
 /* Code from tuturial republic*/
 a:hover {
-  box-shadow: inset 0px 0px 0px 10px rgba(255, 255, 255, 0.836);
+  box-shadow: inset 0px 0px 0px 7px rgba(255, 255, 255, 0.836);
   box-sizing: border-box;
+}
+
+/* .active {
+  background-color: white;
+} */
+.hidden {
+  display: none;
 }
 
 main {
