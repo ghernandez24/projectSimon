@@ -25,11 +25,9 @@ const getRandomSequence = () => {
 		yellowButton,
 	];
 	computerChoices.push(panel[Math.floor(Math.random()* panel.length)])
-	console.log(computerChoices)
 
 	for (let i = 0; i < computerChoices.length; i++){
 		if (computerChoices[i] === redButton){
-			// console.log(redButton)
 			setTimeout (setRedColor, 1000 * i);
 		}
 		else if (computerChoices[i] === greenButton) {
@@ -65,7 +63,6 @@ function restartGame() {
 gameGrid.addEventListener('click', (event) => {
 	if (event.target.classList.contains('panel')) {
 		playerTurn.push(event.target);
-		// console.log(playerTurn, computerChoices);
 		const index = playerTurn.length 
 
 		if (playerTurn[index] === computerChoices[index]) {
@@ -75,7 +72,6 @@ gameGrid.addEventListener('click', (event) => {
 		}
 			if (currentScore < 500) {
 				scoreBoard.innerText = currentScore;
-				// console.log(currentScore);
 			}
 			else if (playerTurn[index -1] !== computerChoices[index -1]){
 				restartGame();
