@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
+    <title>Guillermo Say's</title>
+</head>
+<body> 
+    <header>
+        <h1>Simon Say's</h1>
+        <div class="header-score">
+            <h2 class="score js-score">----</h2>
+        </div>
+    </header>
+
+<div>
+    <button class="modal-buttons" id="openModal">About Game</button>
+    <div id="modal">
+        <div id="modal-textbox">
+            <h2>You've never heard of Simon BEFORE!?</h2>
+            <P>
+                Press the color button that illuminates in sequence. If you get stuck just hit the restart button and try again. Reach level 400 and win a prize!
+            </p>
+            <p>
+                Not really, but now you have the wizdom of the game thus call Simon!
+            </p>
+            <p>
+                Enjoy!
+            </P>
+            <button id="close" class="modal-buttons">Close</button>
+    </div>
+</div>
+    <main>
+        <div class='game-grid'>
+            <a href='#' id='red-panel' class='panel'></a>
+            <a href='#' id='green-panel' class='panel'></a>
+            <a href='#' id='blue-panel' class='panel'></a>
+            <a href='#' id='yellow-panel' class='panel'></a>
+        </div>
+    </main>  
+
+    <h2 id="winner-display"></h2>  
+    
+    <div class="buton">
+        <button id="start" type="button">Start</button>
+        <button id="restart" type="button">Restart</button>
+        <footer class='footer'>By: GHernandez24</footer>
+        
+    </div>
+
+    <script src='app.js'></script>
+
+</body>
+
+</html>
