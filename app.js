@@ -30,25 +30,17 @@ const getRandomSequence = () => {
 	for (let i = 0; i < computerChoices.length; i++){
 		if (computerChoices[i] === redButton){
 			// console.log(redButton)
-			setColorRed()
-			// setRedColor()
-			// redFlash = setInterval(setRedColor, 550);
+			setTimeout (setRedColor, 1000 * i);
 		}
 		else if (computerChoices[i] === greenButton) {
-			setGreenColor()
-			// greenFlash = setInterval(setGreenColor, 550);
+			setTimeout (setGreenColor, 1000 * i);
 		} 
 		else if (computerChoices[i] === blueButton) {
-			setBlueColor()
-			// blueFlash = setInterval(setBlueColor, 550);
+			setTimeout (setBlueColor, 1000 * i);
 		} 
 		else if (computerChoices[i] === yellowButton) {
-			setYellowColor()
-			// yellowFlash = setInterval(setYellowColor, 550); {	
-			}
-		// } else {
-			// setTimeout()
-		// }
+			setTimeout (setYellowColor, 1000 * i);
+		}
 	}
 };
 
@@ -80,66 +72,72 @@ gameGrid.addEventListener('click', (event) => {
 			playerTurn =[];
 			getRandomSequence();
 			currentScore += 1;
-			
+		}
 			if (currentScore < 500) {
 				scoreBoard.innerText = currentScore;
 				// console.log(currentScore);
 			}
-		// 	else if (playerTurn[index - 1] !== computerChoices[index - 1])
-		// 	restartGame();
+			else if (playerTurn[index -1] !== computerChoices[index -1]){
+				restartGame();
+				return;
+			}
 		}
-	}
 });
 
 
-// create function to make start disapper when gameplay
+// create the flash function 
 function setRedColor() {
 	let redButtonDisplay = document.querySelector('#red-panel');
 	redButtonDisplay.style.backgroundColor = '#FD4F52';
-	setTimeout(stopRedColor, 1000);
+	stopRedColor();
 }
 function stopRedColor() {
-	// clearInterval(redFlash);
-	let redButtonDisplay = document.querySelector('#red-panel');
-	redButtonDisplay.style.backgroundColor = 'red';
+	setTimeout(() => { 
+		let redButtonDisplay = document.querySelector('#red-panel');
+		redButtonDisplay.style.backgroundColor = 'red';
+	}, 1000);
 }
 
 // set Green flash function
 function setGreenColor() {
 	let greenButtonDisplay = document.querySelector('#green-panel');
 	greenButtonDisplay.style.backgroundColor = '#16F43A';
-	setTimeout(stopGreenColor, 1000);
+	stopGreenColor();
 }
 function stopGreenColor() {
-	// clearInterval(greenFlash);
-	let greenButtonDisplay = document.querySelector('#green-panel');
-	greenButtonDisplay.style.backgroundColor = 'green';
+	setTimeout(() => {
+		let greenButtonDisplay = document.querySelector('#green-panel');
+		greenButtonDisplay.style.backgroundColor = 'green';
+	}, 1000) ;
 }
 
 // Set yellow flash function
 function setYellowColor() {
 	let yellowButtonDisplay = document.querySelector('#yellow-panel');
-	yellowButtonDisplay.style.backgroundColor = '#F9F489';
-	setTimeout(stopYellowColor, 1000);
+	yellowButtonDisplay.style.backgroundColor = '#F2F5A9';
+	stopYellowColor();
 }
 function stopYellowColor() {
-	// clearInterval(yellowFlash);
-	let yellowButtonDisplay = document.querySelector('#yellow-panel');
-	yellowButtonDisplay.style.backgroundColor = 'yellow';
+	setTimeout(() => {
+		let yellowButtonDisplay = document.querySelector('#yellow-panel');
+		yellowButtonDisplay.style.backgroundColor = 'yellow';
+	}, 1000)
 }
 
 //set blue flash function
 function setBlueColor() {
 	let blueButtonDisplay = document.querySelector('#blue-panel');
 	blueButtonDisplay.style.backgroundColor = '#676CF1';
-	setTimeout(stopBlueColor, 1000);
+	stopBlueColor();
 }
 function stopBlueColor() {
-	// clearInterval(blueFlash);
-	let blueButtonDisplay = document.querySelector('#blue-panel');
-	blueButtonDisplay.style.backgroundColor = 'blue';
+	setTimeout(() => {
+		let blueButtonDisplay = document.querySelector('#blue-panel');
+		blueButtonDisplay.style.backgroundColor = 'blue';
+	}, 1000)
 }
 
+// function for the start button to dissapeer when the user clicks start
 function startGame() {
 	startButton.classList.add('hidden');
 	document.getElementById('winner-display').innerHTML = ' ';

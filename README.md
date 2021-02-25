@@ -3,7 +3,7 @@ First app - The game of Simon - utilizing JavaScript, CSS, and HTML5
 
 ## About Game 
 🔴 🟢 🔵 🟡
-This game is from the classic Simon game that launched back in the 70's. Throughout time there has been many iterations of this classic game. Yy App is meant to take you back and simply enjoy a classic. I have utllized HTML5, CSS and JavaScript while creating this game. This game takes a grid constisting of four panels that my program is set to ramdomize. This is the first of many projects to come. Please enjoy and reach out for any feedback! 🤖
+This game is from the classic Simon game that launched back in the 70's. Throughout time there has been many iterations of this classic game. My App is meant to take you back and simply enjoy a classic. I have utllized HTML5, CSS and JavaScript while creating this game. This game takes a grid constisting of four panels that my program is set to ramdomize. This is the first of many projects to come. Please enjoy and reach out for any feedback! 🤖
 
 ### From the beginning to the end
 
