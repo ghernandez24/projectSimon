@@ -1,0 +1,54 @@
+let redFlash = setInterval(setRedColor, 1000);
+
+function setRedColor(){
+	let redButtonDisplay = document.querySelector('#red-panel')
+	redButtonDisplay.style.backgroundColor = '#FD4F52';
+	setTimeout(stopRedColor, 1750)
+}
+function stopRedColor(){
+	clearInterval(redFlash);
+	let redButtonDisplay = document.querySelector('#red-panel');
+	redButtonDisplay.style.backgroundColor = 'red'
+}
+
+// set Green flash function 
+let greenFlash = setInterval(setGreenColor, 1000);
+
+function setGreenColor() {
+	let greenButtonDisplay = document.querySelector('#green-panel');
+	greenButtonDisplay.style.backgroundColor = '#16F43A';
+	setTimeout(stopGreenColor, 1750);
+}
+function stopGreenColor() {
+	clearInterval(greenFlash);
+	let greenButtonDisplay = document.querySelector('#green-panel');
+	greenButtonDisplay.style.backgroundColor = 'green';
+}
+
+// Set yellow flash function 
+let yellowFlash = setInterval(setYellowColor, 1000);
+
+function setYellowColor() {
+	let yellowButtonDisplay = document.querySelector('#yellow-panel');
+	yellowButtonDisplay.style.backgroundColor = '#EFEA5E';
+	setTimeout(stopYellowColor, 1750);
+}
+function stopYellowColor() {
+	clearInterval(yellowFlash);
+	let yellowButtonDisplay = document.querySelector('#yellow-panel');
+	yellowButtonDisplay.style.backgroundColor = 'yellow';
+}
+
+//set blue flash function 
+let blueFlash = setInterval(setBlueColor, 1000);
+
+function setBlueColor() {
+	let blueButtonDisplay = document.querySelector('#blue-panel');
+	blueButtonDisplay.style.backgroundColor = '#676CF1';
+	setTimeout(stopBlueColor, 1750);
+}
+function stopBlueColor() {
+	clearInterval(blueFlash);
+	let blueButtonDisplay = document.querySelector('#blue-panel');
+	blueButtonDisplay.style.backgroundColor = 'blue';
+}
